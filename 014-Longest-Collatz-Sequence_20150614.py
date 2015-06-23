@@ -6,11 +6,12 @@ def getChainLength( num , dp_dict ):
         return 1
     
     if num%2 == 0:
+        t_num = num
         a = 0
-        while num%2 == 0:
-            num //= 2
+        while t_num%2 == 0:
+            t_num //= 2
             a += 1
-        res = a + getChainLength( num , dp_dict )
+        res = a + getChainLength( t_num , dp_dict )
     else:
         res = 1 + getChainLength( 3*num+1 , dp_dict )
 
