@@ -77,8 +77,10 @@ def getDivisorNumber2( num , primeTable ):
 
 def getDivisorNumber3( num , triangle_num_dict , primeTable , dp_dict ):
 
-    if num <= 3:
+    if num == 1:
         return 1
+    elif num <= 3:
+        return 2
     if num in dp_dict:
         return dp_dict[num]
 
