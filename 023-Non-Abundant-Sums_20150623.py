@@ -34,36 +34,6 @@ def sumOfDivisors(x):
 
 
 #####################################################################
-## Find the Lower Bounding
-## - find the smallest element that larger than or equal to a given t
-## - use binary search
-## - if the given t is largest amon arr elements, return -1
-#####################################################################
-def searchLowerBound( arr , t ):
-    ## assume the arr is sorted
-    l = -1
-    u = len(arr)
-    ## {invariant: arr[l] < t <= arr[u]}
-    ## assume arr[-1] = - Inf and arr[len(arr)] = Inf at the begining
-
-    while l+1 != u:
-        m = (l+u)//2
-        if arr[m] < t:
-            l = m
-        else:
-            u = m
-    ## {invariant: l+1==u and arr[l] < t <= arr[u]}
-
-    #print( "l =",l,"arr[l] =",arr[l])
-    #print( "u =",u,"arr[u] =",arr[u])
-    
-    res = u
-    if res >= len(arr):# or arr[u] != t:    ##allow the given t doesn't exist
-        res = -1
-    return res
-
-
-#####################################################################
 ## Found the Upper Bound
 ## - find the largest element that smaller than or equal to a given t
 ## - use binary search
@@ -127,7 +97,7 @@ if __name__ == "__main__":
     ok = [False] * (28124)
     for i in range(len(abundant_numbers)):
         upper = searchUpperBound( abundant_numbers , 28123 - abundant_numbers[i] )
-        if upper != -1:
+        if upper >= i:
             upper += 1
             for j in range(i,upper):
                 ok[abundant_numbers[i]+abundant_numbers[j]] = True
