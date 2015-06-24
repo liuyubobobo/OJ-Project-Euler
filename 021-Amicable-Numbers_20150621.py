@@ -110,6 +110,7 @@ if __name__ == "__main__":
     print("Thinking 3, time:",t2-t1,"s")
     print("="*50)
 
+
     ##################################################################################################
     ## Thinking 4: Optimize by a factorization form
     ## -- See the detail on http://mathschallenge.net/index.php?section=faq&ref=number/sum_of_divisors
