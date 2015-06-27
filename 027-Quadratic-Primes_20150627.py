@@ -13,7 +13,7 @@ def isPrime( x ):
         return False
     elif x < 4:
         return True
-    elif x%2 == 0:
+    elif x&1 == 0:
         return False
     elif x < 9:
         return True
@@ -57,7 +57,7 @@ if __name__ == "__main__":
                 if x != 1 and x+1 < longestLen:
                     continue
 
-            if abs(b) + 1 < longestLen or abs(b-a) < longestLen:
+            if abs(b) + 1 < longestLen or abs(b-a) + 1 < longestLen:
                 continue
             
             n = 1
