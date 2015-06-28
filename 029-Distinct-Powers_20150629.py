@@ -26,9 +26,10 @@ def solve2( N ):
     return len(res)
 
 
-###############################################
-## Thinking 3: 
-###############################################
+######################################################
+## Thinking 3:Using mathematic to calculate the number
+## -- Only perfect power number can be repeated
+######################################################
 def solve3( N ):
 
     res = [0] * (N+1)
