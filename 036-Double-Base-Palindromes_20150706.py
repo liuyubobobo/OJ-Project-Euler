@@ -13,7 +13,8 @@ def isPalindrome( num , base ):
             return False
 
     return True
-    
+
+
 if __name__ == "__main__":
 
     res = 0
