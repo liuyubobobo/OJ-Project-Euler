@@ -51,7 +51,7 @@ def solve1():
 
 
 ########################################################################################
-## Thinking 1: Using mathematic attribution to see whether a number is a pentagon number
+## Thinking 2: Using mathematic attribution to see whether a number is a pentagon number
 ## -- a number x is a pentagon number means x = n(3n-1)/2
 ## ---- Then, 3n^2-n-2x = 0 has a solution
 ## ---- Which means (1+sqrt(1+24x))/6 is an integer
@@ -92,6 +92,7 @@ def isSquareNumber( x ):
     if num*num == x:
         return True , num
     return False , -1
+
         
 def test( func , title ):
 
