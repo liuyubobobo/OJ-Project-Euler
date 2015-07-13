@@ -1,5 +1,9 @@
 import time
 
+###############################################################
+## This problem's algorithm can be accelerated dramatically
+## The detail can be seen on same problem in Project Euler Plus
+###############################################################
 def solve():
 
     used = [False] * 11
