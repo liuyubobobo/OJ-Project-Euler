@@ -80,7 +80,7 @@ def solve1():
 ##########################################################################
 def solve2():
 
-    primes = findAllPrimes( int(math.sqrt( 5*(10**7) )) )
+    primes = findAllPrimes( int(1.5*math.sqrt(10**7)) )
 
     minRatio = 2*(10**9)
     res = -1
