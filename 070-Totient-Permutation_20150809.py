@@ -54,13 +54,13 @@ def isPermutation( a , b ):
 ##########################
 ## Thinking 1: Brute Force
 ##########################
-def solve1():
-    minRatio = 2*(10**9)
+def solve1( N ):
+    minRatio = N*N
     res = -1
-    for num in range( 2 , 10**7 ):
+    for num in range( 2 , N ):
         phi_num = eulerFunction( num )
         if isPermutation( num , phi_num ):
-            #print( num , "-" , phi_num )
+            print( num , "-" , phi_num , "-" , num/phi_num)
             if num / phi_num < minRatio:
                 minRatio = num / phi_num
                 res = num
@@ -78,21 +78,22 @@ def solve1():
 ## ---- n = p1*p2 , phi(n) = (p1-1)*(p2-1)
 ## ---- check all p1 and p2 , to get the best p1*p2 we get
 ##########################################################################
-def solve2():
+def solve2( N ):
 
-    primes = findAllPrimes( int(1.5*math.sqrt(10**7)) )
+    primes = findAllPrimes( int(100*math.sqrt(N)) )
 
-    minRatio = 2*(10**9)
+    minRatio = N*N
     res = -1
     for i in range( len(primes) ):
         for j in range( i+1 , len(primes) ):
             p1 , p2 = primes[i] , primes[j]
 
             num = p1*p2
-            if num >= 10**7:
+            if num >= N:
                 break
             phi_num = (p1-1)*(p2-1)
             if isPermutation( num , phi_num ):
+                print( num , "-" , phi_num , "-" , num/phi_num)
                 if num / phi_num < minRatio:
                     minRatio = num / phi_num
                     res = num
@@ -124,12 +125,20 @@ def findAllPrimes( N ):
 def test( func , title ):
     
     t1 = time.time()
-    print( func() )
+    print( func(10**7) )
     t2 = time.time()
     print( title ,"- time :" , t2-t1 , "s")
 
     
 if __name__ == "__main__":
 
+    print("solve 1")
+    solve1(5000)
+    print("="*50)
+    print()
+
+    print("solve 2")
+    solve2(5000)
+    
     #test( solve1 , "Thinking 1")
-    test( solve2 , "Thinking 2")
+    #test( solve2 , "Thinking 2")
