@@ -178,6 +178,9 @@ def solve5( a , b , c , d , N ):
 
 ####################################################################
 ## Thinking 6: Mobius Inversion or the Inclusion-Exclusion Principle
+## -- Not understand it totally...
+## -- Refer to this Problem's document
+## -- Another advanced algorithm is introduced in the document
 ####################################################################
 def solve6( a , b , c , d , N ):
 
