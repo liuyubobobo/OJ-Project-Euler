@@ -1,6 +1,7 @@
 import random
 import time
 
+
 def shuffle( arr ):
 
     for i in range( len(arr) ):
@@ -20,15 +21,6 @@ def initCC():
     return CC
 
 
-def excuteOrder( pos , C ):
-
-    theOrder = C[0]
-    newPos = theOrder(pos)
-    del C[0]
-    C.append( theOrder )
-    return newPos
-
-
 def initCH():
 
     CH = []
@@ -40,8 +32,8 @@ def initCH():
     CH.append( lambda x: 5 )    #6
     CH.append( nextR )          #7
     CH.append( nextR )          #8
-    CH.append( nextU )          #9
-    CH.append( goback )         #10
+    CH.append( lambda x: 28 if x == 22 else 12 )    #9
+    CH.append( lambda x: x - 3 )                    #10
     for i in range(6):
         CH.append( lambda x: x )
 
@@ -50,52 +42,37 @@ def initCH():
 
 
 def nextR( pos ):
-    if pos <= 5 or pos > 35:
-        return 5
-    elif pos <= 15:
+    if pos == 7:
         return 15
-    elif pos <= 25:
+    elif pos == 22:
         return 25
-    elif pos <= 35:
-        return 35
-
-
-def nextU( pos ):
-    if pos <= 12 or pos > 28:
-        return 12
-    return 28
-
-
-def goback( pos ):
-    res = pos - 3
-    if res < 0:
-        res += 40
-    return res
+    return 5
 
 
 def simulation():
 
     pos = 0
     turn = 0
-    N = 5000000
+    N = 10000000
     
     CC = initCC()
     CH = initCH()
+    ccp = 0
+    chp = 0
     visit = [0]*40 
 
     doubleNumber = 0
     while turn < N:
-        dice1 = random.randint(1,4)
-        dice2 = random.randint(1,4)
-        dice = dice1 + dice2
 
+        dice1 = random.randint(1,6)
+        dice2 = random.randint(1,6)
         if dice1 == dice2:
             doubleNumber += 1
         else:
             doubleNumber = 0
-            
-        pos += dice
-        pos %= 40
+
+        dice = dice1 + dice2
+        pos = ( pos + dice ) % 40
 
         if doubleNumber == 3:
             pos = 10
@@ -107,13 +84,18 @@ def simulation():
 
         # CC
         elif pos == 2 or pos == 17 or pos == 33:
-            pos = excuteOrder( pos , CC )
-
+            #pos = excuteOrder( pos , CC )
+            pos = CC[ccp](pos)
+            ccp = (ccp+1)%16
         # CH
         elif pos == 7 or pos == 22 or pos == 36:
-            pos = excuteOrder( pos , CH )
-        
-        pos %= 40
+            #pos = excuteOrder( pos , CH )
+            pos = CH[chp](pos)
+            chp = (chp+1)%16
+            if pos == 33:
+                #pos = excuteOrder( pos , CC )
+                pos = CC[ccp](pos)
+                ccp = (ccp+1)%16
         
         visit[pos] += 1
         
@@ -121,6 +103,9 @@ def simulation():
 
     res = [(-visit[i],i) for i in range(40)]
     res.sort()
+
+    for i in range( 40 ):
+        print( "%02d : %.3f" % ( res[i][1] , -res[i][0] / N * 100 ) )
     print( "%02d%02d%02d" % ( res[0][1] , res[1][1] , res[2][1] ) )
 
     
