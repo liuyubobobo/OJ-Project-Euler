@@ -1,17 +1,13 @@
 import time
 import math
 
-
-def searchRes( D ):
-
-    y = 1
-    while True:
-        #print("in searchRes , try y =" , y )
-        if isSquare( D*y*y + 1 ):
-            return int( math.sqrt( D*y*y+1 ) )
-        y += 1
-
-    
+################################################################################
+## The solution is about to solve one kind of Diophantine equation,
+## -- Pell's equation
+## -- The detail can be seen on: https://en.wikipedia.org/wiki/Pell%27s_equation
+## -- a paper is attached for solving this specific equation
+## ---- Solving the Pell Equation by H. W. Lenstra Jr.
+################################################################################
 def solve( maxD ):
 
     maxx = 0
