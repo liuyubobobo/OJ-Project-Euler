@@ -38,9 +38,9 @@ def isTo89_1( x , dp ):
 
         x = sum( [int(i)**2 for i in str(x)] )
 
-if __name__ == "__main__":
 
-    t1 = time.time()
+def solve1():
+
     N = 10**7
     dp = [-1]*(N+1)
     dp[0] = 0
@@ -50,7 +50,78 @@ if __name__ == "__main__":
         if isTo89_1( i , dp ):
         #if isTo89_2( i , dp , N ):
             res += 1
-    print( res )
+    return res
+
+
+########################################################################
+## solve2 try to calculate every digits permutation for a number at once
+########################################################################
+def solve2():
+
+    K = 7
+    N = 700#7*9*9
+    dp = [-1]*(N+1)
+    dp[0] = 0
+    dp[1] = 1
+    for i in range( 2 , N + 1 ):
+        isTo89_1( i , dp )
+        
+    nums = [-1]*K
+    p = [1]*10
+    for i in range(2,10):
+        p[i] = i*p[i-1]
+        
+    return genNumber( 0 , nums , K , dp , p )
+
+
+def genNumber( index , nums , K , dp , p ):
+
+    if index == K:
+        if dp[ sum( [x*x for x in nums] ) ] == 89:
+            return processCombination( nums , p )
+        else:
+            return 0
+    
+    if index == 0:
+        startNum = 0
+    else:
+        startNum = nums[index-1]
+
+    res = 0
+    for i in range( startNum , 10 ):
+        nums[index] = i
+        res += genNumber( index + 1 , nums , K , dp , p )
+
+    return res
+
+
+def processCombination( nums , p ):
+
+    res = p[len(nums)]
+
+    start = 0
+    i = 1
+    while i <= len(nums):
+        if i == len(nums) or nums[i] != nums[start]:
+            res //= p[i-start]
+            start = i
+        i += 1
+        
+    return res
+
+
+def test( func , title ):
+
+    print( "test" , title )
+    t1 = time.time()
+    print( func() )
     t2 = time.time()
     print( "time :" , t2-t1 , "s" )
-            
+    print( "="*50 )
+    print()
+
+    
+if __name__ == "__main__":
+
+    #test( solve1 , "solve1" )
+    test( solve2 , "solve2" )       
