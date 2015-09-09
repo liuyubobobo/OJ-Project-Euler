@@ -27,6 +27,10 @@ def mypow( x , y , MOD ):
     else:
         return ( tres * tres * x ) % MOD
 
+
+def solve3( A , B , C , D , MOD ):
+    return ( A * pow( B , C , MOD ) + D ) % MOD
+
     
 if __name__ == "__main__":
 
@@ -44,9 +48,9 @@ if __name__ == "__main__":
     print( "time :" , t2 - t1 , "s" )
     print()
 
-    print( "solve 2" )
+    print( "solve 3" )
     t1 = time.time()
-    print( solve2( 10**9 , 10**9 , 10**9 , 10**9 , 10**12 ) )
+    print( solve3( 28433 , 2 , 7830457 , 1 , 10**10 ) )
     t2 = time.time()
     print( "time :" , t2 - t1 , "s" )
     print()
