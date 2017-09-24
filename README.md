@@ -36,6 +36,7 @@ email: [liuyubobobo@gmail.com](mailto:liuyubobobo@gmail.com)
 | 2 | [Even Fibonacci numbers](https://projecteuler.net/problem=2) | [C++](ProjectEuler/0002/) , [pdf](ProjectEuler/0002/002_overview.pdf) | [C++](ProjectEuler+/0002/) |
 | 3 | [Largest prime factor](https://projecteuler.net/problem=3) | [C++](ProjectEuler/0003/) , [pdf](ProjectEuler/0003/003_overview.pdf) | [C++](ProjectEuler+/0003/) |
 | 4 | [Largest palindrome product](https://projecteuler.net/problem=4) | [C++](ProjectEuler/0004/) , [pdf](ProjectEuler/0004/004_overview.pdf) | [C++](ProjectEuler+/0004/) |
+| 5 | [Smallest multiple](https://projecteuler.net/problem=5) | [C++](ProjectEuler/0005/) , [pdf](ProjectEuler/0005/005_overview.pdf) | [C++](ProjectEuler+/0005/) |
 
  
 
