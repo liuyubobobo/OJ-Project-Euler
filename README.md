@@ -37,6 +37,7 @@ email: [liuyubobobo@gmail.com](mailto:liuyubobobo@gmail.com)
 | 3 | [Largest prime factor](https://projecteuler.net/problem=3) | [C++](ProjectEuler/0003/) , [pdf](ProjectEuler/0003/003_overview.pdf) | [C++](ProjectEuler+/0003/) |
 | 4 | [Largest palindrome product](https://projecteuler.net/problem=4) | [C++](ProjectEuler/0004/) , [pdf](ProjectEuler/0004/004_overview.pdf) | [C++](ProjectEuler+/0004/) |
 | 5 | [Smallest multiple](https://projecteuler.net/problem=5) | [C++](ProjectEuler/0005/) , [pdf](ProjectEuler/0005/005_overview.pdf) | [C++](ProjectEuler+/0005/) |
+| 6 | [Sum square difference](https://projecteuler.net/problem=6) | [C++](ProjectEuler/0006/) , [pdf](ProjectEuler/0006/006_overview.pdf) | [C++](ProjectEuler+/0006/) |
 
  
 
