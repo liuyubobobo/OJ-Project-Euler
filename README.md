@@ -41,5 +41,6 @@ email: [liuyubobobo@gmail.com](mailto:liuyubobobo@gmail.com)
 | 7 | [10001st prime](https://projecteuler.net/problem=7) | [C++](ProjectEuler/0007/) , [pdf](ProjectEuler/0007/007_overview.pdf) | [C++](ProjectEuler+/0007/) |
 | 8 | [Largest product in a series](https://projecteuler.net/problem=8) | [C++](ProjectEuler/0008/) | [C++](ProjectEuler+/0008/) |
 | 9 | [Special Pythagorean triplet](https://projecteuler.net/problem=9) | [C++](ProjectEuler/0009/) , [pdf](ProjectEuler/0009/009_overview.pdf) | [C++](ProjectEuler+/0009/) |
+| 10 | [Summation of primes](https://projecteuler.net/problem=10) | [C++](ProjectEuler/0010/) , [pdf](ProjectEuler/0010/010_overview.pdf) | [C++](ProjectEuler+/0010/) | 
  
 
