@@ -1,4 +1,4 @@
-/// Source : https://projecteuler.net/problem=8
+/// Source : https://www.hackerrank.com/contests/projecteuler/challenges/euler008
 /// Author : liuyubobobo
 /// Time   : 2017-09-26
 
