@@ -45,4 +45,5 @@ email: [liuyubobobo@gmail.com](mailto:liuyubobobo@gmail.com)
 | 11 | [Largest product in a grid](https://projecteuler.net/problem=11) | [C++](ProjectEuler/0011/) | [C++](ProjectEuler+/0011/) |
 | 12 | [Highly divisible triangular number](https://projecteuler.net/problem=12) | [C++](ProjectEuler/0012/) , [pdf](ProjectEuler/0012/012_overview.pdf) | [C++](ProjectEuler+/0012/) |
 | 13 | [Large sum](https://projecteuler.net/problem=13) | [C++](ProjectEuler/0013/) | [C++](ProjectEuler+/0013/) |
+| 14 | [Longest Collatz sequence](https://projecteuler.net/problem=14) | [C++](ProjectEuler/0014/) | [C++](ProjectEuler+/0014/) |
 
