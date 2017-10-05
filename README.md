@@ -47,4 +47,5 @@ email: [liuyubobobo@gmail.com](mailto:liuyubobobo@gmail.com)
 | 13 | [Large sum](https://projecteuler.net/problem=13) | [C++](ProjectEuler/0013/) | [C++](ProjectEuler+/0013/) |
 | 14 | [Longest Collatz sequence](https://projecteuler.net/problem=14) | [C++](ProjectEuler/0014/) | [C++](ProjectEuler+/0014/) |
 | 15 | [Lattice paths](https://projecteuler.net/problem=15) | [C++](ProjectEuler/0015/) , [pdf](ProjectEuler/0015/015_overview.pdf) | [C++](ProjectEuler+/0015/) |
+| 16 | [Power digit sum](https://projecteuler.net/problem=16) | [C++](ProjectEuler/0016/) | [C++](ProjectEuler+/0016/) |
 
