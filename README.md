@@ -49,4 +49,5 @@ email: [liuyubobobo@gmail.com](mailto:liuyubobobo@gmail.com)
 | 15 | [Lattice paths](https://projecteuler.net/problem=15) | [C++](ProjectEuler/0015/) , [pdf](ProjectEuler/0015/015_overview.pdf) | [C++](ProjectEuler+/0015/) |
 | 16 | [Power digit sum](https://projecteuler.net/problem=16) | [C++](ProjectEuler/0016/) | [C++](ProjectEuler+/0016/) |
 | 17 | [Number letter counts](https://projecteuler.net/problem=17) | [C++](ProjectEuler/0017/) | [C++](ProjectEuler+/0017/) |
+| 18 | [Maximum path sum I](https://projecteuler.net/problem=18) | [C++](ProjectEuler/0018/) | [C++](ProjectEuler+/0018/) | 
 
