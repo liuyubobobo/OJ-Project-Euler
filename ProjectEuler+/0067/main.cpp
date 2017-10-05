@@ -1,10 +1,9 @@
-/// Source : https://projecteuler.net/problem=67
+/// Source : https://www.hackerrank.com/contests/projecteuler/challenges/euler067
 /// Author : liuyubobobo
 /// Time   : 2017-10-05
 
 #include <iostream>
 #include <vector>
-#include <fstream>
 #include <sstream>
 
 using namespace std;
@@ -32,30 +31,24 @@ public:
 
 int main() {
 
-    string filename = "p067_triangle.txt";
-    ifstream file;
-    file.open(filename);
-    if(file.is_open()) {
+    int T;
+    cin >> T;
+    while(T --) {
+        int row;
+        cin >> row;
 
         vector<vector<int> > numbers;
-        string line;
-        int i = 0;
-        while(getline(file, line)) {
-            stringstream ss(line);
+        for (int i = 0; i < row; i++) {
             vector<int> v;
             for (int j = 0; j <= i; j++) {
                 int t;
-                ss >> t;
+                cin >> t;
                 v.push_back(t);
             }
             numbers.push_back(v);
-            i ++;
         }
 
         cout << Solution().bestRoute(numbers) << endl;
-        file.close();
     }
-    else
-        cout << "Open file " << filename << " error!" << endl;
     return 0;
 }

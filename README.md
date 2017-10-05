@@ -50,4 +50,5 @@ email: [liuyubobobo@gmail.com](mailto:liuyubobobo@gmail.com)
 | 16 | [Power digit sum](https://projecteuler.net/problem=16) | [C++](ProjectEuler/0016/) | [C++](ProjectEuler+/0016/) |
 | 17 | [Number letter counts](https://projecteuler.net/problem=17) | [C++](ProjectEuler/0017/) | [C++](ProjectEuler+/0017/) |
 | 18 | [Maximum path sum I](https://projecteuler.net/problem=18) | [C++](ProjectEuler/0018/) | [C++](ProjectEuler+/0018/) | 
+| 67 | [Maximum path sum II](https://projecteuler.net/problem=67) | [C++](ProjectEuler/0067/) | [C++](ProjectEuler+/0067/) |
 
